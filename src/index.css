@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@400;600;700&family=Montserrat:ital,wght@0,200;0,400;0,600;1,300;1,600&display=swap');
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+
+/* font-family: 'Cinzel Decorative', cursive; */
+/* font-family: 'Inter', sans-serif; */
+
+/* Root variables */
+/* colors */
+:root {
+  --highlight: rgba(255, 255, 255, 0.25);
+
+  --grey-100: #6c7072;
+  --white: #fff;
+  --white-light: #f9fbff;
+  --dark: #0d1025;
+  --transition: ease-in-out 0.3s;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
