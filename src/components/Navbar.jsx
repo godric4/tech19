@@ -5,6 +5,7 @@ import logo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import Sidebar from './SideBar';
 import { links } from '../utils/constants';
+import { pattern } from '../assets';
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -29,7 +30,10 @@ const Navbar = () => {
       <div className={`nav-bg ${scrolling ? 'scrolled' : ''}`}>
         <Link to='/'>
           {' '}
-          <img src={logo} alt='Logo' className='brand-logo' />
+          <div className='brand'>
+            <img src={logo} alt='Logo' className='brand-logo' />
+            <h3>TECH19</h3>
+          </div>
         </Link>
 
         <ul className='nav-links'>
@@ -47,35 +51,66 @@ const Navbar = () => {
           <Sidebar />
         </div>
       </div>
+      {/* <div
+        className='pattern'
+        style={{ backgroundImage: `url(${pattern})` }}
+      ></div> */}
     </Wrapper>
   );
 };
 
 const Wrapper = styled.nav`
+  position: fixed;
+  z-index: 1000;
+  color: black;
   .nav-bg {
-    background: ${({ theme }) => theme.background};
-    height: 4rem;
-    position: fixed;
+    height: 5rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
     padding: 0 2rem;
-    color: ${({ theme }) => theme.primaryText};
-    z-index: 100;
+    /* color: white; */
+
     margin-top: -1rem;
   }
 
-  .scrolled {
-    background: ${({ theme }) => theme.background};
-    border-bottom: 3px solid goldenrod;
-    color: var(--navy);
+  .pattern {
+    width: 100vw;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: white;
   }
 
+  .scrolled {
+    background: #ffffff;
+    height: 100%;
+    /* border-bottom: 2px solid goldenrod; */
+  }
+
+  .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 0.8rem;
+
+    h3 {
+      margin-left: -1.5rem;
+    }
+  }
   .brand-logo {
     height: 4rem;
     width: 4rem;
-    margin-top: 0.8rem;
+    /* margin-top: 0.8rem; */
+  }
+
+  li {
+    list-style-type: none;
+    font-weight: bold;
   }
 
   .nav-links {
@@ -107,7 +142,7 @@ const Wrapper = styled.nav`
 
     .brand-logo {
       margin-left: -2rem;
-      height: 6rem;
+      height: 3rem;
       width: 6rem;
     }
 

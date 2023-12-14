@@ -69,7 +69,7 @@ const Sidebar = () => {
 
 const Wrapper = styled.aside`
   .sidebar {
-    background-color: ${(props) => props.theme.primaryBackground};
+    /* background-color: white; */
     position: fixed;
     top: 0rem;
     right: 1.3rem;
@@ -96,12 +96,12 @@ const Wrapper = styled.aside`
 
   ul {
     text-align: left;
-    background-color: ${({ theme }) => theme.background};
+    background-color: white;
     position: absolute;
     right: -1.4rem;
-    height: 93vh;
-    width: 250px;
-    color: ${({ theme }) => theme.primaryText};
+    height: 35vh;
+    width: 100vw;
+    color: black;
     transition: var(--transition);
     overflow: hidden;
   }

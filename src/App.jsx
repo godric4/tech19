@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './pages';
-import { Navbar } from './components';
+import { Footer, Navbar } from './components';
 
 const App = () => {
   return (
@@ -9,6 +9,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

@@ -18,11 +18,12 @@
 :root {
   --highlight: rgba(255, 255, 255, 0.25);
 
-  --grey-100: #6c7072;
+  --grey: #c8cdcf;
   --white: #fff;
   --white-light: #f9fbff;
   --dark: #0d1025;
   --transition: ease-in-out 0.3s;
+  --navy: #002346;
 }
 
 body {
@@ -35,9 +36,16 @@ body {
   }
 }
 
+.cta {
+  background-color: #ffc107;
+  padding: 1rem;
+  border-radius: 25px;
+  font-weight: 500;
+}
+
 /* Links */
 
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none !important;
+  color: inherit !important;
 }
