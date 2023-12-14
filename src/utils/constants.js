@@ -4,7 +4,6 @@ export const links = [
   { id: 4, url: '/about', pathName: 'About Us' },
   { id: 1, url: '/services', pathName: 'Our Services' },
 
-  { id: 2, url: '/reviews', pathName: 'Reviews' },
   { id: 3, url: '/contact', pathName: 'Contact Us' },
 ];
 
